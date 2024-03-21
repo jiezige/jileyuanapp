@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>assets</key>
+			<array>
+				<dict>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>https://github.com/ydfun/lydl/releases/download/v1.0/TargetO.ipa</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>display-image</string>
+					<key>needs-shine</key>
+					<integer>0</integer>
+					<key>url</key>
+					<string>https://www.jlyld.xyz/data/image/app/2023/10/23/63bf3d1465536747e2ae7fe2d3d835d6.png?v=1698286122</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>full-size-image</string>
+					<key>needs-shine</key>
+					<true/>
+					<key>url</key>
+					<string>https://www.jlyld.xyz/data/image/app/2023/10/23/63bf3d1465536747e2ae7fe2d3d835d6.png?v=1698286122</string>
+				</dict>
+			</array>
+			<key>metadata</key>
+			<dict>
+				<key>bundle-identifier</key>
+				<string>www.miaotaogog.com</string>
+				<key>bundle-version</key>
+				<string>1.0</string>
+				<key>kind</key>
+				<string>software</string>
+				<key>title</key>
+				<string>喵桃GO</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
