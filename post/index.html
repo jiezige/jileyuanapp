@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* 弹窗样式 */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .popup-inner {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      width: 400px; /* 调整弹窗的宽度 */
+      height: 300px; /* 调整弹窗的高度 */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-title {
+      font-size: 24px; /* 调整标题的字体大小 */
+    }
+
+    .popup-input {
+      font-size: 16px; /* 调整输入框的字体大小 */
+      padding: 10px; /* 调整输入框的内边距 */
+    }
+
+    .popup-button {
+      font-size: 16px; /* 调整按钮的字体大小 */
+      padding: 10px 20px; /* 调整按钮的内边距 */
+      margin-right: 10px; /* 调整按钮之间的右侧间距 */
+    }
+
+    /* 媒体查询 */
+    @media screen and (max-width: 600px) {
+      /* 手机屏幕上的样式调整 */
+      body {
+        font-size: 14px;
+      }
+      
+      .popup-inner {
+        width: 250px; /* 在手机屏幕上调整弹窗的宽度 */
+        height: 200px; /* 在手机屏幕上调整弹窗的高度 */
+      }
+
+      .popup-title {
+        font-size: 20px; /* 在手机屏幕上调整标题的字体大小 */
+      }
+
+      .popup-input {
+        font-size: 14px; /* 在手机屏幕上调整输入框的字体大小 */
+        padding: 8px; /* 在手机屏幕上调整输入框的内边距 */
+      }
+
+      .popup-button {
+        font-size: 14px; /* 在手机屏幕上调整按钮的字体大小 */
+        padding: 8px 16px; /* 在手机屏幕上调整按钮的内边距 */
+        margin-right: 8px; /* 在手机屏幕上调整按钮之间的右侧间距 */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="popup" id="popup">
+    <div class="popup-inner">
+      <h3 class="popup-title">请输入授权码</h3>
+      <input type="text" id="authCodeInput" class="popup-input">
+      <br>
+      <div style="display: flex; justify-content: center; width: 100%;">
+        <button onclick="checkAuthCode()" class="popup-button">确定</button>
+        <button onclick="redirectToMobilePage()" class="popup-button">跳转</button>
+      </div>
+      <p id="errorMessage" style="color: red;"></p>
+    </div>
+  </div>
+
+  <div id="content">
+    <h1>网页内容</h1>
+    <p>这是网页的内容部分。</p>
+  </div>
+
+  <script>
+    function checkAuthCode() {
+      var input = document.getElementById('authCodeInput').value;
+      var validCode = '123456'; // 正确的授权码
+
+      var errorMessage = document.getElementById('errorMessage');
+
+      if (input === '') {
+        errorMessage.textContent = '请输入授权码';
+      } else if (input === validCode) {
+        var popup = document.getElementById('popup');
+        popup.style.display = 'none'; // 隐藏弹窗
+
+        // 还原了页面缩放
+        document.body.style.zoom = 1;
+      } else {
+        errorMessage.textContent = '授权码错误';
+      }
+    }
+
+    function redirectToMobilePage() {
+      window.location.href = 'https://wwv.shuzik.com/links/99D764D5';
+    }
+  </script>
+</body>
+</html>
